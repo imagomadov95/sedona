@@ -1,0 +1,133 @@
+.form-review__title {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.field_label {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.field_input {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.form-review__titl {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.impression-form__label {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.attractions-form__label {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.feedback-form__label {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.feedback-form__textarea {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.form-review__form {
+  display: grid;
+}
+@media (min-width: @tablet-width) {
+  .form-review__form {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact-form {
+    grid-column: ~"1/3";
+    grid-row: ~"2/3";
+  }
+  .attractions-form {
+    grid-column: ~"1/3";
+    grid-row: ~"3/4";
+  }
+  .impression-form {
+    order: -1;
+  }
+  .feedback-form {
+    grid-column: ~"1/3";
+    grid-row: ~"4/5";
+  }
+  .form-review__button {
+    grid-column: ~"1/3";
+    grid-row: ~"5/6";
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-review__title {
+    grid-column: ~"1/3";
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .attractions-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .form-review__title {
+    grid-column: ~"1/3";
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .attractions-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .form-review__title {
+    grid-column: ~"1/5";
+  }
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .form-review__button {
+    width: 458px;
+  }
+}

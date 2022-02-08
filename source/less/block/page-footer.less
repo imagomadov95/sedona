@@ -1,0 +1,29 @@
+.page-footer__item {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: @black;
+}
+.page-footer {
+  display: grid;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}
+@media (min-width: @tablet-width) {
+  .page-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+}

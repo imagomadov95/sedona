@@ -1,0 +1,74 @@
+.city-advantages__list {
+  color: @black;
+  background-color: @white;
+  list-style: none;
+  text-align: left;
+  font-size: 18px;
+  padding: 35px 0 35px 50px;
+  width: 100%;
+  display: grid;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    /* width: @tablet-width; */
+  }
+
+  @media (min-width: @desktop-width) {
+    /* width: @desktop-width; */
+  }
+}
+
+.city-advantages__item:not(:last-child) {
+  padding-bottom: 26px;
+}
+
+.city-advantages__title {
+  font-size: 18px;
+  margin: 0;
+  padding-bottom: 21px;
+}
+
+.city-advantages__item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.city-advantages__item--lodging,
+.city-advantages__item--souvenir,
+.city-advantages__item--food {
+  position: relative;
+}
+
+.city-advantages__item--lodging::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 39px;
+  height: 37px;
+  background-image: url("../img/icon-house.svg");
+  top: -10px;
+  left: -48px;
+}
+
+.city-advantages__item--souvenir::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 32px;
+  height: 38px;
+  background-image: url("../img/icon-gift.svg");
+  top: -10px;
+  left: -45px;
+}
+
+.city-advantages__item--food::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  background-image: url("../img/icon-burger.svg");
+  top: -7px;
+  left: -52px;
+}

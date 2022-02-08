@@ -1,0 +1,33 @@
+.main-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-list__item a {
+  font-weight: bold;
+  display: block;
+  color: @black;
+}
+@media (max-width: @mobile-width-only) {
+  .site-list__item a {
+    color: @white;
+    background-color: @blue;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .site-list__item {
+    width: 20%;
+  }
+
+  .site-list__item:nth-child(4n-2) {
+    margin-right: 20%;
+  }
+}

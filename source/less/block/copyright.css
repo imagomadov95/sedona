@@ -1,0 +1,15 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.copyright__item {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+}
+.copyright__link {
+  margin: auto;
+}
