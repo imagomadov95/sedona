@@ -10,43 +10,50 @@
   <body class="page__body">
     <div class="page__wrapper">
       <header class="page-header">
-        <a class="page-header__logo">
-          <img
-            class="page-header__logo-image"
-            src="img/logotype-mobile.svg"
-            width="101.7"
-            height="84"
-            alt="Sedona city of"
-          />
-        </a>
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <a class="main-nav__logo">
+            <img
+              src="img/logotype-mobile.svg"
+              width="102"
+              height="84"
+              alt="Логотип Sedona"
+            />
+          </a>
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list site-list">
-              <li class="site-list__item">
-                <a> Главная </a>
-              </li>
-              <li class="site-list__item">
-                <a href="catalog.html"> ФОТО И ВИДЕО </a>
-              </li>
-              <li class="site-list__item">
-                <a href="form.html"> Форма Отзыва </a>
-              </li>
-              <li class="site-list__item">
-                <a href=""> HTML ACADEMY </a>
-              </li>
-            </ul>
-          </div>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a>Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="photo.html">Фото и видео</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="form.html">Форма отзыва</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">HTML ACADEMY</a>
+            </li>
+          </ul>
         </nav>
+        <div class="page-header__main-image">
+          <img
+            class="page-header__welcome-title"
+            src="img/text-imdex.svg"
+            width="282"
+            height="214"
+            alt="Надпись Добро пожаловать"
+          />
+        </div>
       </header>
       <main class="page-main">
         <h1 class="visually-hidden">Седона сайт для туристов!</h1>
         <section class="advantage">
           <div class="advantage__inner">
             <h2 class="advantage__title">
-              СЕДОНА — небольшой городок в АРИЗОНЕ, зАСЛУЖИвающий большего!
+              СЕДОНА — небольшой городок в АРИЗОНЕ,<br />
+              зАСЛУЖИвающий большего!
             </h2>
             <p class="advantage__title-subtitle">
               Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
@@ -60,12 +67,7 @@
                   <p>— №1 —</p>
                   <p>СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
                 </div>
-                <img
-                  class="advantage__item__img"
-                  width="320"
-                  src="/img/photo-city@1x.png"
-                  alt=""
-                />
+                <div class="advantage-img"></div>
               </div>
               <div class="city-advantages">
                 <h4 class="visually-hidden">Преимущества города</h4>
@@ -99,12 +101,7 @@
                 <p>— №2 —</p>
                 <p>Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
-              <img
-                class="advantage__item__img"
-                width="320"
-                src="/img/photo-bridge@1x.png"
-                alt=""
-              />
+              <div class="advantage-img"></div>
             </li>
             <li
               class="advantage__item advantage__item--grey advantage__item--square"
@@ -222,5 +219,6 @@
         </footer>
       </main>
     </div>
+    <script src="js/navigation.js"></script>
   </body>
 </html>

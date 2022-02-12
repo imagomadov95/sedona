@@ -1,19 +1,35 @@
 .page-header {
   background-color: @white;
-  background-image: url("../img/back-mobile.jpg.jpg");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  padding-bottom: 389px;
+  position: relative;
 }
 
-.page-header__logo {
-  position: absolute;
-  left: calc(50% - 51px);
+.page-header__main-image {
+  position: relative;
+  height: 389px;
+  background-image: url("../img/intro-triangle.svg.svg"),
+    url("../img/back-mobile.jpg.jpg");
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 100%;
+  background-size: 1200px 57px, cover;
+  padding-top: 90px;
+  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
+  .page-header__main-image {
+    height: 518px;
+    background-image: url("../img/intro-triangle.svg.svg"),
+      url("../img/back-mobile.jpg.jpg");
+  }
+
   .page-header__logo {
     height: 84px;
+  }
+
+  .page-header__welcome-title {
+    width: 460px;
+    height: 350px;
   }
 }
 

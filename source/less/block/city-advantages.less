@@ -10,11 +10,9 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr 1fr;
-    /* width: @tablet-width; */
-  }
-
-  @media (min-width: @desktop-width) {
-    /* width: @desktop-width; */
+    padding: 0;
+    padding-top: 50px;
+    margin: 0;
   }
 }
 
@@ -38,6 +36,28 @@
 .city-advantages__item--souvenir,
 .city-advantages__item--food {
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.city-advantages__item--souvenir {
+  @media (min-width: @tablet-width) {
+    order: 3;
+  }
+}
+.city-advantages__item--lodging {
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
+}
+.city-advantages__item--food {
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
 }
 
 .city-advantages__item--lodging::before {
@@ -47,8 +67,18 @@
   width: 39px;
   height: 37px;
   background-image: url("../img/icon-house.svg");
+  background-repeat: no-repeat;
   top: -10px;
   left: -48px;
+  background-position-x: center;
+  background-position-y: center;
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/icon-house-comp.svg");
+    width: 75px;
+    height: 75px;
+    left: calc(50% - 38px);
+    top: 0;
+  }
 }
 
 .city-advantages__item--souvenir::before {
@@ -58,8 +88,18 @@
   width: 32px;
   height: 38px;
   background-image: url("../img/icon-gift.svg");
+  background-repeat: no-repeat;
   top: -10px;
   left: -45px;
+  background-position-x: center;
+  background-position-y: center;
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/icon-gift-comp.svg");
+    width: 75px;
+    height: 75px;
+    left: calc(50% - 38px);
+    top: 0;
+  }
 }
 
 .city-advantages__item--food::before {
@@ -69,6 +109,24 @@
   width: 40px;
   height: 35px;
   background-image: url("../img/icon-burger.svg");
+  background-repeat: no-repeat;
   top: -7px;
   left: -52px;
+  background-position-x: center;
+  background-position-y: center;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/icon-burger-comp.svg");
+    width: 75px;
+    height: 75px;
+    left: calc(50% - 38px);
+    top: 0;
+  }
+}
+
+.city-advantages__item {
+  @media (min-width: @tablet-width) {
+    height: 250px;
+    padding-top: 100px;
+  }
 }
