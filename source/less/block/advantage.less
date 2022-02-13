@@ -1,6 +1,4 @@
 .advantage__title {
-  font-family: PT Sans;
-  font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
@@ -10,15 +8,23 @@
 .advantage__list {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0;
   width: 100%;
+}
+
+.advantage__item {
+  text-align: center;
+}
+.advantage__item p {
+  margin: 0;
+  padding-bottom: 24px;
 }
 
 @media (min-width: @tablet-width) {
   .advantage__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr 256px 256px;
   }
 }
 
@@ -31,23 +37,6 @@
 
 .advantage__item--city {
   background-color: @blue;
-}
-.advantage__content {
-  padding: 0 20px 0 20px;
-  height: 211px;
-  color: @white;
-  @media (min-width: @tablet-width) {
-    height: 256px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .advantage__item__row {
-    grid-column: ~"1 / 4";
-    grid-row: ~"1 / 2";
-
-    display: flex;
-  }
 }
 
 @media (min-width: @tablet-width) {
@@ -79,28 +68,29 @@
     grid-row: ~"3 / 4";
   }
 }
+.advantage__item--tourist,
+.advantage__item--road,
+.advantage__item--square {
+  border-top: 2px solid;
+  border-color: #d6d6d6;
+
+  padding: 26px 20px 0 20px;
+  @media (min-width: @tablet-width) {
+    padding: 66px 20px 0 20px;
+    border: none;
+  }
+}
 
 .advantage__title-subtitle {
-  font-family: PT Sans;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 26px;
   text-align: center;
 }
 
 .advantage__subject {
-  font-family: PT Sans;
-  font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
-}
-
-.advantage__content {
-  background-color: @blue;
-  text-align: center;
-  padding-top: 50px;
 }
 
 .advantage__subject {
@@ -113,10 +103,14 @@
 }
 .advantage__content {
   width: 100%;
-  @media (min-width: @tablet-width) {
-    width: 33%;
-  }
+  padding: 0 20px 0 20px;
+  height: 211px;
+  color: @white;
+  background-color: @blue;
+  text-align: center;
+  padding-top: 50px;
 }
+
 .advantage__inner {
   width: 100%;
 }
@@ -127,4 +121,40 @@
 .advantage__title-subtitle {
   margin-left: 20px;
   margin-right: 40px;
+}
+.advantage__item__row {
+  @media (min-width: @tablet-width) {
+    grid-column: ~"1 / 4";
+    grid-row: ~"1 / 2";
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.advantage__item--city .advantage__item__row::after {
+  display: block;
+  content: "";
+  height: 256px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  grid-column: ~"2/4";
+  grid-row: ~"1/2";
+  background-image: url("../img/photo-city@1x.png");
+  background-size: @tablet-width 260px, cover;
+}
+
+.advantage__item--bridj .advantage__item__row::after {
+  display: block;
+  content: "";
+  height: 256px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  grid-column: ~"2/4";
+  grid-row: ~"1/2";
+  background-image: url("../img/photo-bridge@1x.png");
+  background-size: @tablet-width 260px, cover;
+}
+.advantage__item--bridj .advantage__item__row {
+  @media (min-width: @tablet-width) {
+    order: 3;
+  }
 }
