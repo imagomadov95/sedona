@@ -11,6 +11,10 @@
   bottom: -28px;
   z-index: 1;
   padding: 0;
+
+  @media (min-width: @desktop-width) {
+    left: calc(50% - 91px);
+  }
 }
 
 .main-nav__list {
@@ -28,6 +32,7 @@
   padding-bottom: 15px;
   text-align: center;
   line-height: 24px;
+  text-transform: uppercase;
 }
 
 @media (max-width: @mobile-width-only) {
@@ -158,5 +163,18 @@
 
   .main-nav__item:nth-child(4n-2) {
     margin-right: 20%;
+  }
+}
+
+.main-nav__logo img {
+  height: 84px;
+  width: 101px;
+  @media (min-width: @tablet-width) {
+    height: 84px;
+    width: 101px;
+  }
+  @media (min-width: @desktop-width) {
+    height: 96px;
+    width: 186px;
   }
 }

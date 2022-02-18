@@ -16,10 +16,9 @@
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    bottom: 8px;
-
-    background-color: @black;
-    opacity: 0.3;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 3;
     color: @white;
   }
 }
@@ -108,6 +107,7 @@
 .gallery__list {
   display: flex;
   flex-direction: column;
+
   width: 100%;
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -121,15 +121,22 @@
 @media (min-width: @tablet-width) {
   .gallery__item:first-child {
     flex-basis: 100%;
+    width: 100%;
+    height: 489px;
   }
   .gallery__item:not(first-child) {
     flex-basis: 50%;
+    height: 489px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .gallery__item:not(first-child) {
     flex-basis: 33%;
+    height: 400px;
+  }
+  .gallery__item:first-child {
+    height: 400px;
   }
 }
 
@@ -139,11 +146,7 @@
 
   @media (min-width: @tablet-width) {
     width: 100%;
-    height: 267px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 100%;
+    height: 400px;
   }
 }
 
@@ -152,13 +155,12 @@
   height: 280px;
 
   @media (min-width: @tablet-width) {
-    width: 100%;
     height: 400px;
   }
-
-  @media (min-width: @desktop-width) {
-    width: 100%;
-  }
+}
+.gallery__item a {
+  padding: 0;
+  margin: 0;
 }
 
 .impression-form__item {

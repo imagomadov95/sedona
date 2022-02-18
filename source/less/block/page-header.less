@@ -20,7 +20,7 @@
   .page-header__main-image {
     height: 518px;
     background-image: url("../img/intro-triangle.svg.svg"),
-      url("../img/back-mobile.jpg.jpg");
+      url("../img/back-desktop.jpg\ \(1\).jpg");
   }
 
   .page-header__logo {
@@ -30,6 +30,10 @@
   .page-header__welcome-title {
     width: 460px;
     height: 350px;
+  }
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/intro-triangle.svg.svg"),
+      url("../img/back-desktop.jpg\ \(1\).jpg");
   }
 }
 

@@ -138,8 +138,20 @@
   background-position: center center;
   grid-column: ~"2/4";
   grid-row: ~"1/2";
-  background-image: url("../img/photo-city@1x.png");
-  background-size: @tablet-width 260px, cover;
+  background-image: url("../img/photo-city-1.jpg");
+
+  background-size: 100% 260px, cover;
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/photo-city-1@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/photo-city.jpg");
+  }
+
+  @media (min-width: @tablet-width) and (min-resolution: 2dppx) {
+    background-image: url("../img/photo-city@2x.jpg");
+  }
 }
 
 .advantage__item--bridj .advantage__item__row::after {
@@ -150,11 +162,19 @@
   background-position: center center;
   grid-column: ~"2/4";
   grid-row: ~"1/2";
-  background-image: url("../img/photo-bridge@1x.png");
-  background-size: @tablet-width 260px, cover;
-}
-.advantage__item--bridj .advantage__item__row {
+  background-image: url("../img/photo-bridge-1.jpg");
+  background-size: 100% 260px, cover;
+
   @media (min-width: @tablet-width) {
-    order: 3;
+    background-image: url("../img/photo-bridge.jpg");
+  }
+}
+
+.advantage__item--bridj .advantage__item__row::after {
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/photo-bridge-1@2x.jpg");
+  }
+  @media (min-width: @tablet-width) and (min-resolution: 2dppx) {
+    background-image: url("../img/photo-bridge@2x.jpg");
   }
 }
